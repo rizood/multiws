@@ -17,7 +17,7 @@
 <p align="center">
 <img src="https://i.postimg.cc/mD3jjZV6/IMG-20220930-000211.jpg">
 <img src="https://i.postimg.cc/GpCsQFNd/IMG-20220930-000229.jpg">
-<img src="https://i.postimg.cc/bJvrC3Rc/IMG-20220930-000220.jpg">
+<img src="https://i.postimg.cc/kMzNSbnX/IMG-20220930-000220.jpg">
 
 Salam. Ini merupakan sebuah script yang memudahkan para seller VPN untuk install package-package yang diperlukan untuk berjualan VPN.
                               
