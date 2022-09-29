@@ -29,7 +29,7 @@ echo -e "$COLOR1│${NC}"
 echo -e "$COLOR1│${NC}  ${ERROR} DNS Cannot Be Empty";
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}              • Kenn XV x Alexxa •            $COLOR1│$NC"
+echo -e "$COLOR1│${NC}              • AutoScript By Reyz-V4 •       $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
