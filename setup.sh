@@ -297,7 +297,7 @@ fi
 curl -sS ifconfig.me > /etc/myipvps
 
 echo " "
-echo "====================-[ KennXV Premium ]-===================="
+echo "====================-[ Reyz-V4 Premium ]-===================="
 echo ""
 echo "------------------------------------------------------------"
 echo ""  | tee -a log-install.txt
@@ -318,7 +318,7 @@ echo "   - Trojan WS               : 443" | tee -a log-install.txt
 echo "   - Sodosok WS/GRPC         : 443" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
-echo "   - Timezone                : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
+echo "   - Timezone                : Asia/Malaysia (GMT +7)"  | tee -a log-install.txt
 echo "   - Fail2Ban                : [ON]"  | tee -a log-install.txt
 echo "   - Dflate                  : [ON]"  | tee -a log-install.txt
 echo "   - IPtables                : [ON]"  | tee -a log-install.txt
@@ -335,11 +335,11 @@ echo "   - Backup & Restore Data" | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> About " | tee -a log-install.txt
-echo "   - Script Presented By      : KennXV x Alexxa" | tee -a log-install.txt" | tee -a log-install.txt
-echo "   - Contact (Only Text)      : t.me/aixxy7" | tee -a log-install.txt" | tee -a log-install.txt
+echo "   - Script Presented By      : @GHReyz " | tee -a log-install.txt" | tee -a log-install.txt
+echo "   - Contact (Only Text)      : t.me/GHReyz" | tee -a log-install.txt" | tee -a log-install.txt
 echo "------------------------------------------------------------"
 echo ""
-echo "=============-[ KennXV x Alexxa ]-==============="
+echo "=============-[ AutoScript By Reyz-V4 ]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
