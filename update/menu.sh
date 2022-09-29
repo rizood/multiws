@@ -175,7 +175,7 @@ fi
 echo -e "$COLOR1│$NC Memory Usage   : $uram / $tram"
 echo -e "$COLOR1│$NC ISP & City     : $ISP & $CITY"
 echo -e "$COLOR1│$NC Current Domain : $(cat /etc/xray/domain)"
-echo -e "$COLOR1│ Script Version    : Reyz-V4 (V5)"
+echo -e "$COLOR1│ Script Version: Reyz-V4 (V5)"
 echo -e "$COLOR1│$NC IP-VPS         : ${COLOR1}$IPVPS${NC}"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
