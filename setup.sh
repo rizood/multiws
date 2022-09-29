@@ -297,7 +297,7 @@ fi
 curl -sS ifconfig.me > /etc/myipvps
 
 echo " "
-echo "====================-[ Reyz-V4 Premium ]-===================="
+echo "====================-[ KennXV Premium ]-===================="
 echo ""
 echo "------------------------------------------------------------"
 echo ""  | tee -a log-install.txt
@@ -339,7 +339,7 @@ echo "   - Script Presented By      : KennXV x Alexxa" | tee -a log-install.txt"
 echo "   - Contact (Only Text)      : t.me/aixxy7" | tee -a log-install.txt" | tee -a log-install.txt
 echo "------------------------------------------------------------"
 echo ""
-echo "=============-[ Script By Reyz-V4 ]-==============="
+echo "=============-[ KennXV x Alexxa ]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
