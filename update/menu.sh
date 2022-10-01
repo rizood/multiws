@@ -231,7 +231,7 @@ else
 fi;
 echo -e "$COLOR1└─────────────────────────────────────────────────┘$NC"
 echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}              • AutoScript Reyz-V4 •             $COLOR1│$NC"
+echo -e "$COLOR1│${NC}            • AutoScript Reyz-V4 •               $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 echo -ne " Select menu : "; read opt
