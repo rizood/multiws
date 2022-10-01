@@ -158,6 +158,9 @@ echo -e "$COLOR1┌────────────────────�
 uphours=`uptime -p | awk '{print $2,$3}' | cut -d , -f1`
 upminutes=`uptime -p | awk '{print $4,$5}' | cut -d , -f1`
 uptimecek=`uptime -p | awk '{print $6,$7}' | cut -d , -f1`
+cpu_usage1="$(ps aux | awk 'BEGIN {sum=0} {sum+=$3}; END {print sum}')"
+cpu_usage="$((${cpu_usage1/\.*/} / ${corediilik:-1}))"
+cpu_usage+=" %"
 cekup=`uptime -p | grep -ow "day"`
 IPVPS=$(curl -s ipinfo.io/ip )
 serverV=$( curl -sS https://raw.githubusercontent.com/rizood/update/main/version_up)
@@ -172,11 +175,13 @@ echo -e "$COLOR1│$NC System Uptime  : $uphours $upminutes $uptimecek"
 else
 echo -e "$COLOR1│$NC System Uptime  : $uphours $upminutes"
 fi
-echo -e "$COLOR1│$NC Memory Usage   : $uram / $tram"
-echo -e "$COLOR1│$NC ISP & City     : $ISP & $CITY"
-echo -e "$COLOR1│$NC Current Domain : $(cat /etc/xray/domain)"
-echo -e "$COLOR1│ Script Version : Reyz-V4 (V5)"
 echo -e "$COLOR1│$NC IP-VPS         : ${COLOR1}$IPVPS${NC}"
+echo -e "$COLOR1│$NC Current Domain : $(cat /etc/xray/domain)"
+echo -e "$COLOR1│$NC Memory Usage   : $uram / $tram"
+echo -e "$COLOR1│$NC CPU VPS Usage  : $cpu_usage1"
+echo -e "$COLOR1│$NC ISP & City     : $ISP & $CITY"
+echo -e "$COLOR1│ Telegram       : @GHReyz"
+echo -e "$COLOR1│ Script Version : Reyz-V4 (V5)"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│$NC [ SSH WS : ${status_ws} ]  [ XRAY : ${status_xray} ]   [ NGINX : ${status_nginx} ] $COLOR1│$NC"
