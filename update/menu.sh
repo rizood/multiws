@@ -222,7 +222,7 @@ echo -e "$COLOR1│$NC Version     :${COLOR1} $(cat /opt/.ver) Latest Version${N
 echo -e "$COLOR1│$NC Client Name : $Name"
 if [ $exp \> 1000 ];
 then
-    echo -e "$COLOR1│$NC License     : Lifetime"
+    echo -e "$COLOR1│$NC License     : $Exp"
 else
     datediff "$Exp" "$DATE"
 fi;
