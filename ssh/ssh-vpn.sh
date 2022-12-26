@@ -280,7 +280,7 @@ wget -O add-ssh "https://raw.githubusercontent.com/rizood/multiws/main/ov/add-ss
 wget -O cek-ssh "https://raw.githubusercontent.com/rizood/multiws/main/ov/cek-ssh.sh"
 wget -O del-ssh "https://raw.githubusercontent.com/rizood/multiws/main/ov/del-ssh.sh"
 wget -O member "https://raw.githubusercontent.com/rizood/multiws/main/ov/member.sh"
-wget -O menu-ssh "https://raw.githubusercontent.com/rizood/multiws/main/ov/menu-ssh.sh"
+wget -O menu-ovpn "https://raw.githubusercontent.com/rizood/multiws/main/ov/menu-ovpn.sh"
 wget -O renew-ssh "https://raw.githubusercontent.com/rizood/multiws/main/ov/renew-ssh.sh
 chmod +x speedtest
 chmod +x xp
@@ -289,7 +289,7 @@ chmod +x add-ssh
 chmod +x cek-ssh
 chmod +x del-ssh
 chmod +x member
-chmod +x menu-ssh
+chmod +x menu-ovpn
 chmod +x renew-ssh
 
 cd
