@@ -289,7 +289,7 @@ chmod +x add-ssh
 chmod +x cek-ssh
 chmod +x del-ssh
 chmod +x member
-chmod +xmenu-ssh
+chmod +x menu-ssh
 chmod +x renew-ssh
 
 cd
