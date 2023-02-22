@@ -224,17 +224,9 @@ cat key.pem cert.pem >> /etc/stunnel/stunnel.pem
 sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 /etc/init.d/stunnel4 restart
 
-# OpenVPN
-wget https://raw.githubusercontent.com/rizood/multiws/main/ov/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
-
 
 # install fail2ban
 apt -y install fail2ban
-
-# install squid for debian 11
-apt -y install squid
-wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/rizood/multiws/main/ov/squid3.conf"
-sed -i $MYIP2 /etc/squid/squid.conf
 
 # Instal DDOS Flate
 if [ -d '/usr/local/ddos' ]; then
@@ -276,22 +268,41 @@ cd /usr/bin
 wget -O speedtest "https://raw.githubusercontent.com/rizood/multiws/main/ssh/speedtest_cli.py"
 wget -O xp "https://raw.githubusercontent.com/rizood/multiws/main/ssh/xp.sh"
 wget -O auto-set "https://raw.githubusercontent.com/rizood/multiws/main/xray/auto-set.sh"
-wget -O add-ssh "https://raw.githubusercontent.com/rizood/multiws/main/ov/add-ssh.sh"
-wget -O cek-ssh "https://raw.githubusercontent.com/rizood/multiws/main/ov/cek-ssh.sh"
-wget -O del-ssh "https://raw.githubusercontent.com/rizood/multiws/main/ov/del-ssh.sh"
-wget -O member "https://raw.githubusercontent.com/rizood/multiws/main/ov/member.sh"
-wget -O menu-ovpn "https://raw.githubusercontent.com/rizood/multiws/main/ov/menu-ovpn.sh"
-wget -O renew-ssh "https://raw.githubusercontent.com/rizood/multiws/main/ov/renew-ssh.sh
+wget -O add-ssh "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/add-ssh.sh"
+wget -O autokill "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/autokill.sh"
+wget -O cek-ssh "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/cek-ssh.sh"
+wget -O ceklim "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/ceklim.sh"
+wget -O del-ssh "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/del-ssh"
+wget -O delete "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/delete.sh"
+wget -O member "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/member.sh"
+wget -O menu-ssh "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/menu-ssh.sh"
+wget -O port-squid "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/port-squid.sh"
+wget -O renew-ssh "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/renew-ssh.sh"
+wget -O restart "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/restart.sh"
+wget -O trial "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/trial.sh"
+wget -O user-list "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/user-list.sh"
+wget -O user-lock "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/user-lock.sh"
+wget -O user-password "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/user-password.sh"
+wget -O user-unlock "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/user-unlock.sh"
 chmod +x speedtest
 chmod +x xp
 chmod +x auto-set
 chmod +x add-ssh
+chmod +x autokill
 chmod +x cek-ssh
+chmod +x ceklim
 chmod +x del-ssh
+chmod +x delete
 chmod +x member
-chmod +x menu-ovpn
+chmod +x menu-ssh
+chmod +x port-squid
 chmod +x renew-ssh
-
+chmod +x restart
+chmod +x trial
+chmod +x user-list
+chmod +x user-lock
+chmod +x user-password
+chmod +x user-unlock
 cd
 
 
@@ -334,9 +345,6 @@ chown -R www-data:www-data /home/vps/public_html
 sleep 1
 echo -e "$yell[SERVICE]$NC Restart All service SSH & OVPN"
 /etc/init.d/nginx restart >/dev/null 2>&1
-sleep 1
-echo -e "[ ${green}ok${NC} ] Restarting openvpn"
-/etc/init.d/openvpn restart >/dev/null 2>&1
 sleep 1
 echo -e "[ ${green}ok${NC} ] Restarting nginx"
 /etc/init.d/openvpn restart >/dev/null 2>&1
