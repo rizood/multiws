@@ -186,13 +186,6 @@ echo "/usr/sbin/nologin" >> /etc/shells
 /etc/init.d/ssh restart
 /etc/init.d/dropbear restart
 
-# install squid for debian 9,10 & ubuntu 20.04
-apt -y install squid3
-# install squid for debian 11
-apt -y install squid
-wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/rizood/multiws/main/squid3.conf"
-sed -i $MYIP2 /etc/squid/squid.conf
-
 cd
 # install stunnel
 #apt install stunnel4 -y
@@ -231,8 +224,6 @@ cat key.pem cert.pem >> /etc/stunnel/stunnel.pem
 sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 /etc/init.d/stunnel4 restart
 
-#OpenVPN
-wget https://raw.githubusercontent.com/rizood/multiws/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
@@ -277,8 +268,7 @@ cd /usr/bin
 wget -O speedtest "https://raw.githubusercontent.com/rizood/multiws/main/ssh/speedtest_cli.py"
 wget -O xp "https://raw.githubusercontent.com/rizood/multiws/main/ssh/xp.sh"
 wget -O auto-set "https://raw.githubusercontent.com/rizood/multiws/main/xray/auto-set.sh"
-wget -O add-ssh "https://raw.githubusercontent.com/rizood/multiws/main/ssh/add-ssh.sh"
-wget -O autokill "https://raw.githubusercontent.com/rizood/multiws/main/ssh/autokill.sh"
+-O autokill "https://raw.githubusercontent.com/rizood/multiws/main/ssh/autokill.sh"
 wget -O cek-ssh "https://raw.githubusercontent.com/rizood/multiws/main/ssh/cek-ssh.sh"
 wget -O ceklim "https://raw.githubusercontent.com/rizood/multiws/main/ssh/ceklim.sh"
 wget -O del-ssh "https://raw.githubusercontent.com/rizood/multiws/main/ssh/del-ssh"
@@ -352,7 +342,7 @@ fi
 cd
 chown -R www-data:www-data /home/vps/public_html
 sleep 1
-echo -e "$yell[SERVICE]$NC Restart All service SSH & ssh"
+echo -e "$yell[SERVICE]$NC Restart All service SSH & OVPN"
 /etc/init.d/nginx restart >/dev/null 2>&1
 sleep 1
 echo -e "[ ${green}ok${NC} ] Restarting nginx"
