@@ -186,6 +186,13 @@ echo "/usr/sbin/nologin" >> /etc/shells
 /etc/init.d/ssh restart
 /etc/init.d/dropbear restart
 
+# install squid for debian 9,10 & ubuntu 20.04
+apt -y install squid3
+# install squid for debian 11
+apt -y install squid
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/rizood/multiws/main/squid3.conf"
+sed -i $MYIP2 /etc/squid/squid.conf
+
 cd
 # install stunnel
 #apt install stunnel4 -y
@@ -224,6 +231,8 @@ cat key.pem cert.pem >> /etc/stunnel/stunnel.pem
 sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 /etc/init.d/stunnel4 restart
 
+#OpenVPN
+wget https://raw.githubusercontent.com/rizood/multiws/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
