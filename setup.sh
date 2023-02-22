@@ -302,6 +302,8 @@ echo ""
 echo "------------------------------------------------------------"
 echo ""  | tee -a log-install.txt
 echo "   >>> Service & Port"  | tee -a log-install.txt
+echo "   - OpenVPN                 : 1194"  | tee -a log-install.txt
+echo "   - Squid Proxy                 : 8000"  | tee -a log-install.txt
 echo "   - OpenSSH                 : 22"  | tee -a log-install.txt
 echo "   - SSH Websocket           : 80 [ON]" | tee -a log-install.txt
 echo "   - SSH SSL Websocket       : 443" | tee -a log-install.txt
