@@ -78,7 +78,7 @@ export GREEN='\033[0;32m'
 # // SSH Websocket Proxy
 ssh_ws=$( systemctl status ws-stunnel | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
 if [[ $ssh_ws == "running" ]]; then
-    status_ws="${GREEN}ON${NC}"
+    status_ws="${GREEN}✓${NC}"
 else
     status_ws="${RED}OFF${NC}"
 fi
@@ -86,7 +86,7 @@ fi
 # // nginx
 nginx=$( systemctl status nginx | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
 if [[ $nginx == "running" ]]; then
-    status_nginx="${GREEN}ON${NC}"
+    status_nginx="${GREEN}✓${NC}"
 else
     status_nginx="${RED}OFF${NC}"
 fi
@@ -94,7 +94,7 @@ fi
 # // SSH Websocket Proxy
 xray=$( systemctl status xray | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
 if [[ $xray == "running" ]]; then
-    status_xray="${GREEN}ON${NC}"
+    status_xray="${GREEN}✓${NC}"
 else
     status_xray="${RED}OFF${NC}"
 fi
@@ -161,13 +161,15 @@ uptimecek=`uptime -p | awk '{print $6,$7}' | cut -d , -f1`
 cpu_usage1="$(ps aux | awk 'BEGIN {sum=0} {sum+=$3}; END {print sum}')"
 cpu_usage="$((${cpu_usage1/\.*/} / ${corediilik:-1}))"
 cpu_usage+=" %"
+WKT=$(date +"%T")
+DATE=$(date +"%d-%B-%Y")
 cekup=`uptime -p | grep -ow "day"`
 IPVPS=$(curl -s ipinfo.io/ip )
 serverV=$( curl -sS https://raw.githubusercontent.com/rizood/update/main/version_up)
 if [ "$Isadmin" = "ON" ]; then
 uis="${GREEN}Premium User$NC"
 else
-uis="${RED}Free Version$NC"
+uis="${RED}Premium Script$NC"
 fi
 echo -e "$COLOR1│$NC User Roles     : $uis"
 if [ "$cekup" = "day" ]; then
@@ -179,9 +181,11 @@ echo -e "$COLOR1│$NC IP-VPS         : ${COLOR1}$IPVPS${NC}"
 echo -e "$COLOR1│$NC Current Domain : $(cat /etc/xray/domain)"
 echo -e "$COLOR1│$NC Memory Usage   : $uram / $tram"
 echo -e "$COLOR1│$NC CPU VPS Usage  : $cpu_usage1 %"
+echo -e "$COLOR1│Time Location      : $WKT"
+echo -e "$COLOR1│Date Location      : $DATE"
 echo -e "$COLOR1│$NC ISP & City     : $ISP & $CITY"
 echo -e "$COLOR1│ Telegram       : @GHReyz"
-echo -e "$COLOR1│ Script Version : Reyz-V4 (V5)"
+echo -e "$COLOR1│ Script Version : GH-Reyz (V5)"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│$NC [ SSH WS : ${status_ws} ]  [ XRAY : ${status_xray} ]   [ NGINX : ${status_nginx} ] $COLOR1│$NC"
@@ -228,10 +232,10 @@ mai="datediff "$Exp" "$DATE""
 
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐$NC"
 echo -e "$COLOR1│$NC Version     :${COLOR1} $(cat /opt/.ver) Latest Version${NC}"
-echo -e "$COLOR1│$NC Client Name : $Name"
+echo -e "$COLOR1│$NC Owner Script: GH-Reyz"
 if [ $exp \> 1000 ];
 then
-    echo -e "$COLOR1│$NC License     : $Exp"
+    echo -e "$COLOR1│$NC License     : Lifetime"
 else
     datediff "$Exp" "$DATE"
 fi;
