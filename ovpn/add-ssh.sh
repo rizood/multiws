@@ -42,9 +42,9 @@ export line=$(cat /etc/line)
 export back_text=$(cat /etc/back)
 
 clear
-echo -e   "  \e[$line═══════════════════════════════════════════════════════\e[m"
+echo -e   "  ═══════════════════════════════════════════════════════\e[m"
 echo -e   "   CREATE USER SSH & OPENVPN "
-echo -e   "  \e[$line═══════════════════════════════════════════════════════\e[m"
+echo -e   "  ═══════════════════════════════════════════════════════\e[m"
 read -p "   Username : " Login
 read -p "   Password : " Pass
 read -p "   Expired (days): " masaaktif
