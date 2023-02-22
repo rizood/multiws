@@ -234,7 +234,6 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 #OpenVPN
 wget https://raw.githubusercontent.com/rizood/multiws/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
-
 # install fail2ban
 apt -y install fail2ban
 
