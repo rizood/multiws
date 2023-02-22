@@ -284,7 +284,7 @@ wget -O ceklim "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/cekli
 wget -O del-ssh "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/del-ssh"
 wget -O delete "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/delete.sh"
 wget -O member "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/member.sh"
-wget -O menu-ssh "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/menu-ssh.sh"
+wget -O menu-ovpn "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/menu-ssh.sh"
 wget -O port-squid "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/port-squid.sh"
 wget -O renew-ssh "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/renew-ssh.sh"
 wget -O restart "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/restart.sh"
@@ -303,7 +303,7 @@ chmod +x ceklim
 chmod +x del-ssh
 chmod +x delete
 chmod +x member
-chmod +x menu-ssh
+chmod +x menu-ovpn
 chmod +x port-squid
 chmod +x renew-ssh
 chmod +x restart
