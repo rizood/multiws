@@ -285,7 +285,7 @@ wget -O del-ssh "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/del-
 wget -O delete "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/delete.sh"
 wget -O member "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/member.sh"
 wget -O menussh "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/menussh.sh"
-wget -O port-squid "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/port-squid.sh
+wget -O port-squid "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/port-squid.sh"
 wget -O renew-ssh "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/renew-ssh.sh"
 wget -O restart "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/restart.sh"
 wget -O trial "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/trial.sh"
