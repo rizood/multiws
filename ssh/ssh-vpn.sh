@@ -277,16 +277,16 @@ cd /usr/bin
 wget -O speedtest "https://raw.githubusercontent.com/rizood/multiws/main/ssh/speedtest_cli.py"
 wget -O xp "https://raw.githubusercontent.com/rizood/multiws/main/ssh/xp.sh"
 wget -O auto-set "https://raw.githubusercontent.com/rizood/multiws/main/xray/auto-set.sh"
-wget -O add-ssh "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/add-ssh.sh"
+wget -O add-ovpn "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/add-ssh.sh"
 wget -O autokill "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/autokill.sh"
-wget -O cek-ssh "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/cek-ssh.sh"
+wget -O cek-ovpn "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/cek-ssh.sh"
 wget -O ceklim "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/ceklim.sh"
-wget -O del-ssh "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/del-ssh"
+wget -O del-ovpn "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/del-ssh"
 wget -O delete "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/delete.sh"
 wget -O member "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/member.sh"
 wget -O menu-ovpn "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/menu-ssh.sh"
-wget -O port-squid "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/port-squid.sh"
-wget -O renew-ssh "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/renew-ssh.sh"
+wget -O port-squid "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/port-squid.sh
+wget -O renew-ovpn "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/renew-ssh.sh"
 wget -O restart "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/restart.sh"
 wget -O trial "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/trial.sh"
 wget -O user-list "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/user-list.sh"
@@ -296,16 +296,16 @@ wget -O user-unlock "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/
 chmod +x speedtest
 chmod +x xp
 chmod +x auto-set
-chmod +x add-ssh
+chmod +x add-ovpn
 chmod +x autokill
-chmod +x cek-ssh
+chmod +x cek-ovpn
 chmod +x ceklim
-chmod +x del-ssh
+chmod +x del-ovpn
 chmod +x delete
 chmod +x member
 chmod +x menu-ovpn
 chmod +x port-squid
-chmod +x renew-ssh
+chmod +x renew-ovpn
 chmod +x restart
 chmod +x trial
 chmod +x user-list
