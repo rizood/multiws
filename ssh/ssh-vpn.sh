@@ -284,7 +284,7 @@ wget -O ceklim "https://raw.githubusercontent.com/rizood/multiws/main/ssh/ceklim
 wget -O del-ssh "https://raw.githubusercontent.com/rizood/multiws/main/ssh/del-ssh"
 wget -O delete "https://raw.githubusercontent.com/rizood/multiws/main/ssh/delete.sh"
 wget -O member "https://raw.githubusercontent.com/rizood/multiws/main/ssh/member.sh"
-wget -O menu-sshh "https://raw.githubusercontent.com/rizood/multiws/main/ssh/menu-ssh.sh"
+wget -O menussh "https://raw.githubusercontent.com/rizood/multiws/main/ssh/menu-ssh.sh"
 wget -O port-squid "https://raw.githubusercontent.com/rizood/multiws/main/ssh/port-squid.sh
 wget -O renew-ssh "https://raw.githubusercontent.com/rizood/multiws/main/ssh/renew-ssh.sh"
 wget -O restart "https://raw.githubusercontent.com/rizood/multiws/main/ssh/restart.sh"
