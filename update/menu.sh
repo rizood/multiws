@@ -190,12 +190,13 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1│${NC} ${COLBG1}               • VPS PANEL MENU •              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "  ${COLOR1}[01]${NC} • SSHWS   [${YELLOW}Menu${NC}]   ${COLOR1}[07]${NC} • THEME    [${YELLOW}Menu${NC}]  $COLOR1│$NC"   
+echo -e "  ${COLOR1}[01]${NC} • OPENVPN [${YELLOW}Menu${NC}]   ${COLOR1}[07]${NC} • THEME    [${YELLOW}Menu${NC}]  $COLOR1│$NC"   
 echo -e "  ${COLOR1}[02]${NC} • VMESS   [${YELLOW}Menu${NC}]   ${COLOR1}[08]${NC} • BACKUP   [${YELLOW}Menu${NC}]  $COLOR1│$NC"  
 echo -e "  ${COLOR1}[03]${NC} • VLESS   [${YELLOW}Menu${NC}]   ${COLOR1}[09]${NC} • ADD HOST/DOMAIN  $COLOR1│$NC"  
 echo -e "  ${COLOR1}[04]${NC} • TROJAN  [${YELLOW}Menu${NC}]   ${COLOR1}[10]${NC} • RENEW CERT       $COLOR1│$NC"  
 echo -e "  ${COLOR1}[05]${NC} • SS WS   [${YELLOW}Menu${NC}]   ${COLOR1}[11]${NC} • SETTINGS [${YELLOW}Menu${NC}]  $COLOR1│$NC"
-echo -e "  ${COLOR1}[06]${NC} • SET DNS [${YELLOW}Menu${NC}]   ${COLOR1}[12]${NC} • INFO     [${YELLOW}Menu${NC}]  $COLOR1│$NC"
+echo -e "  ${COLOR1}[06]${NC} • SSH WS  [${YELLOW}Menu${NC}]   ${COLOR1}[12]${NC} • INFO     [${YELLOW}Menu${NC}]  $COLOR1│$NC"
+echo -e "  ${COLOR1}[06]${NC} • SET DNS [${YELLOW}Menu${NC}]
 if [ "$Isadmin" = "ON" ]; then
 echo -e "                                                  $COLOR1│$NC"
 echo -e "  ${COLOR1}[13]${NC} • REG IP  [${YELLOW}Menu${NC}]   ${COLOR1}[14]${NC} • SET BOT  [${YELLOW}Menu${NC}]  $COLOR1│$NC"
@@ -241,15 +242,16 @@ echo -e "$COLOR1└────────────────────�
 echo -e ""
 echo -ne " Select menu : "; read opt
 case $opt in
-01 | 1) clear ; menu-ssh ;;
+01 | 1) clear ; menu-ovpn ;;
 02 | 2) clear ; menu-vmess ;;
 03 | 3) clear ; menu-vless ;;
 04 | 4) clear ; menu-trojan ;;
 05 | 5) clear ; menu-ss ;;
-06 | 6) clear ; menu-dns ;;
+06 | 6) clear ; menu-ssh ;;
 06 | 7) clear ; menu-theme ;;
 07 | 8) clear ; menu-backup ;;
 09 | 9) clear ; add-host ;;
+99 | 99) clear ; menu-dns ;;
 10) clear ; crtxray ;;
 11) clear ; menu-set ;;
 12) clear ; info ;;
