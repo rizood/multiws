@@ -242,7 +242,7 @@ echo -e "$COLOR1└────────────────────�
 echo -e ""
 echo -ne " Select menu : "; read opt
 case $opt in
-01 | 1) clear ; menu-ovpn ;;
+01 | 1) clear ; menu-sshh ;;
 02 | 2) clear ; menu-vmess ;;
 03 | 3) clear ; menu-vless ;;
 04 | 4) clear ; menu-trojan ;;
