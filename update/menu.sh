@@ -186,7 +186,7 @@ echo -e "$COLOR1│ Telegram       : @GHReyz"
 echo -e "$COLOR1│ Script Version : Reyz-V4 (V5)"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│$NC [ SSH WS : ${status_ws} ]  [ XRAY : ${status_xray} ]   [ NGINX : ${status_nginx} ] $COLOR1│$NC"
+echo -e "$COLOR1│$NC [ SSH WS : ${status_ws} ]  [ XRAY : ${status_xray} ]   [ NGINX : ${status_nginx} ] $COLOR1     │$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} ${COLBG1}               • VPS PANEL MENU •              ${NC} $COLOR1│$NC"
@@ -198,8 +198,7 @@ echo -e "  ${COLOR1}[03]${NC} • VLESS   [${YELLOW}Menu${NC}]   ${COLOR1}[09]${
 echo -e "  ${COLOR1}[04]${NC} • TROJAN  [${YELLOW}Menu${NC}]   ${COLOR1}[10]${NC} • RENEW CERT       $COLOR1│$NC"  
 echo -e "  ${COLOR1}[05]${NC} • SS WS   [${YELLOW}Menu${NC}]   ${COLOR1}[11]${NC} • SETTINGS [${YELLOW}Menu${NC}]  $COLOR1│$NC"
 echo -e "  ${COLOR1}[06]${NC} • SSH WS  [${YELLOW}Menu${NC}]   ${COLOR1}[12]${NC} • INFO     [${YELLOW}Menu${NC}]  $COLOR1│$NC"
-echo -e " "
-echo -e "  ${COLOR1}[99]${NC} • SET DNS [${YELLOW}Menu${NC}]"
+echo -e "  ${COLOR1}[99]${NC} • SET DNS [${YELLOW}Menu${NC}]                                         $COLOR1│$NC"
 if [ "$Isadmin" = "ON" ]; then
 echo -e "                                                  $COLOR1│$NC"
 echo -e "  ${COLOR1}[13]${NC} • REG IP  [${YELLOW}Menu${NC}]   ${COLOR1}[14]${NC} • SET BOT  [${YELLOW}Menu${NC}]  $COLOR1│$NC"
@@ -234,7 +233,7 @@ echo -e "$COLOR1│$NC Version     :${COLOR1} $(cat /opt/.ver) Latest Version${N
 echo -e "$COLOR1│$NC Client Name : $Name"
 if [ $exp \> 1000 ];
 then
-    echo -e "$COLOR1│$NC License     : $DATE"
+    echo -e "$COLOR1│$NC License     : $Exp"
 else
     datediff "$Exp" "$DATE"
 fi;
