@@ -17,7 +17,7 @@ export back_text=$(cat /etc/back)
 
 clear
 echo -e   "  ═══════════════════════════════════════════════════════\e[m"
-echo -e   "   CREATE USER SSH & OPENVPN "
+echo -e   "   🔰 CREATE USER SSH & OPENVPN 🔰"
 echo -e   "  ═══════════════════════════════════════════════════════\e[m"
 read -p "   Username : " Login
 read -p "   Password : " Pass
@@ -63,6 +63,7 @@ useradd -e `date -d "$masaaktif days" +"%Y-%m-%d"` -s /bin/false -M $Login
 export exp="$(chage -l $Login | grep "Account expires" | awk -F": " '{print $2}')"
 export exp1=`date -d "$masaaktif days" +"%Y-%m-%d"`
 export IPVPS=$(curl -s ipinfo.io/ip )
+export domain=$(cat /usr/local/etc/xray/domain)
 
 echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 echo -e ""
@@ -82,7 +83,7 @@ echo -e "Badvpn(UDPGW)    : 7100-7300"
 echo -e "═══════════════════════════════════════════════════════\e[m"
 echo -e "CONFIG OPENVPN"
 echo -e "--------------"
-echo -e "OpenVPN TCP : $ovpn http://$IPVPS:81/client-tcp-$ovpn.ovpn"
+echo -e "OpenVPN TCP : $ovpn http://$(curl -s ipinfo.io/ip ):81/client-tcp-$ovpn.ovpn"
 echo -e "═══════════════════════════════════════════════════════\e[m"
-echo -e "Script By Rizood🔰"
+echo -e "🔰Script By Rizood🔰"
 echo -e "═══════════════════════════════════════════════════════\e[m"
