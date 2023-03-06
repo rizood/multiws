@@ -24,6 +24,7 @@ read -p "   Password : " Pass
 read -p "   Expired (days): " masaaktif
 
 IP=$(wget -qO- icanhazip.com);
+IPVPS=$(curl -s ipinfo.io/ip )
 source /var/lib/premium-script/ipvps.conf
 if [[ "$IP" = "" ]]; then
 domain=$(cat /usr/local/etc/xray/domain)
@@ -61,6 +62,7 @@ export harini=`date -d "0 days" +"%Y-%m-%d"`
 useradd -e `date -d "$masaaktif days" +"%Y-%m-%d"` -s /bin/false -M $Login
 export exp="$(chage -l $Login | grep "Account expires" | awk -F": " '{print $2}')"
 export exp1=`date -d "$masaaktif days" +"%Y-%m-%d"`
+export IPVPS=$(curl -s ipinfo.io/ip )
 
 echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 echo -e ""
@@ -73,7 +75,7 @@ echo -e "Created          : $harini"
 echo -e "Expired          : $exp1"
 echo -e "═══════════════════════════════════════════════════════\e[m"
 echo -e "Domain           : $domain"
-echo -e "IP/Host          : $MYIP"
+echo -e "IP/Host          : $IPVPS"
 echo -e "TCP OpenVPN      : 1194"
 echo -e "Port Squid       : 8000"
 echo -e "Badvpn(UDPGW)    : 7100-7300"
@@ -82,5 +84,5 @@ echo -e "CONFIG OPENVPN"
 echo -e "--------------"
 echo -e "OpenVPN TCP : $ovpn http://$MYIP:81/client-tcp-$ovpn.ovpn"
 echo -e "═══════════════════════════════════════════════════════\e[m"
-echo -e "Script By $creditt"
+echo -e "Script By Rizood🔰"
 echo -e "═══════════════════════════════════════════════════════\e[m"
