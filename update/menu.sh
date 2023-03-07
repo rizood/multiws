@@ -201,9 +201,10 @@ echo -e "$COLOR1│$NC IP-VPS         : ${COLOR1}$IPVPS${NC}"
 echo -e "$COLOR1│$NC Current Domain : $(cat /etc/xray/domain)"
 echo -e "$COLOR1│$NC Memory Usage   : $uram / $tram"
 echo -e "$COLOR1│$NC CPU VPS Usage  : $cpu_usage1 %"
-echo -e "$COLOR1│$NC ISP & City     : $ISP & $CITY"
-echo -e "$COLOR1│$NC Telegram Owner : @GHReyz"
+echo -e "$COLOR1│$NC ISP Server     : $ISP"
+echo -e "$COLOR1│$NC City Server    : $CITY"
 echo -e "$COLOR1│$NC Order ID Cust  : 71178291"
+echo -e "$COLOR1│$NC AutoScript By  : @GHReyz"
 echo -e "$COLOR1│$NC Script Version : XRAYSSH (V5)"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
@@ -258,7 +259,7 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1│$NC [ SSH WS : ${status_ws} ]  [ XRAY : ${status_xray} ]   [ NGINX : ${status_nginx} ] $COLOR1   │$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐$NC"
-echo -e "$COLOR1│$NC Version     :${COLOR1} 5.0 Latest Version${NC}"
+echo -e "$COLOR1│$NC Version     :${COLOR1}🔰 XRAYSSH V5 🔰${NC}"
 echo -e "$COLOR1│$NC Client Name : $Name"
 if [ $exp \> 1000 ];
 then
@@ -282,7 +283,7 @@ case $opt in
 06 | 7) clear ; menu-theme ;;
 07 | 8) clear ; menu-backup ;;
 09 | 9) clear ; add-host ;;
-99 | 98) clear ; menu-dns ;;
+98 | 98) clear ; menu-dns ;;
 99 | 99) clear ; passwd ;;
 10) clear ; crtxray ;;
 11) clear ; menu-set ;;
