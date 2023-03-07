@@ -163,6 +163,10 @@ cpu_usage="$((${cpu_usage1/\.*/} / ${corediilik:-1}))"
 cpu_usage+=" %"
 WKT=$(date +"%T")
 DATE=$(date +"%d-%B-%Y")
+tram=$( free -m | awk 'NR==2 {print $2}' )
+cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
+cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
+freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
 cekup=`uptime -p | grep -ow "day"`
 IPVPS=$(curl -s ipinfo.io/ip )
 serverV=$( curl -sS https://raw.githubusercontent.com/rizood/update/main/version_up)
@@ -177,11 +181,18 @@ echo -e "$COLOR1│$NC System Uptime  : $uphours $upminutes $uptimecek"
 else
 echo -e "$COLOR1│$NC System Uptime  : $uphours $upminutes"
 fi
+echo -e "$COLOR1│$NC Cpu Model      : $cname"
+echo -e "$COLOR1│$NC Number Of Core : $cores"
+echo -e "$COLOR1│$NC Cpu Frequency  : $freq MHz"
 echo -e "$COLOR1│$NC IP-VPS         : ${COLOR1}$IPVPS${NC}"
 echo -e "$COLOR1│$NC Current Domain : $(cat /etc/xray/domain)"
+echo -e "$COLOR1│$NC Total Ram      : $tram MB"
 echo -e "$COLOR1│$NC Memory Usage   : $uram / $tram"
 echo -e "$COLOR1│$NC CPU VPS Usage  : $cpu_usage1 %"
 echo -e "$COLOR1│$NC ISP & City     : $ISP & $CITY"
+echo -e "$COLOR1│$NC Time Location  : $WKT"
+echo -e "$COLOR1│$NC Date Location  : $DATE"
+echo -e "$COLOR1│$NC Order ID Cust  : 7716621"
 echo -e "$COLOR1│ Telegram       : @GHReyz"
 echo -e "$COLOR1│ Script Version : Reyz-V4 (V5)"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
