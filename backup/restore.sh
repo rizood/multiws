@@ -9,8 +9,6 @@ echo "Please input link to your vps data backup file."
 echo "You can check it on your email if you run backup data vps before."
 read -rp "Link File: " -e url
 wget -O backup.zip "$url"
-unzip backup.zip
-rm -f backup.zip
 sleep 1
 echo Start Restore
 rm -f /root/backup/backup.zip &> /dev/null
