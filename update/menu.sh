@@ -223,12 +223,10 @@ echo -e "  ${COLOR1}[04]${NC} • TROJAN  [${YELLOW}Menu${NC}]   ${COLOR1}[10]${
 echo -e "  ${COLOR1}[05]${NC} • SS WS   [${YELLOW}Menu${NC}]   ${COLOR1}[11]${NC} • SETTINGS [${YELLOW}Menu${NC}]  $COLOR1│$NC"
 echo -e "  ${COLOR1}[06]${NC} • SSH WS  [${YELLOW}Menu${NC}]   ${COLOR1}[12]${NC} • INFO     [${YELLOW}Menu${NC}]  $COLOR1│$NC" 
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│$NC [ SSH WS : ${status_ws} ]  [ XRAY : ${status_xray} ]   [ NGINX : ${status_nginx} ] $COLOR1   │$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"                                               
 echo -e "  ${COLOR1}[13]${NC} • REG IP  [${YELLOW}Menu${NC}]   ${COLOR1}[14]${NC} • SET BOT  [${YELLOW}Menu${NC}]  $COLOR1 $NC"
-echo -e "  ${COLOR1}[99]${NC} • SET DNS [${YELLOW}Menu${NC}]      $COLOR1 $NC"
+
+echo -e "  ${COLOR1}[98]${NC} • SET DNS [${YELLOW}Menu${NC}]   ${COLOR1}[99]${NC} • PASSWORD [${YELLOW}Menu${NC}]  $COLOR1 $NC"
 if [ "$Isadmin" = "ON" ]; then                                                 
 ressee="menu-ip"
 bottt="menu-bot"
@@ -256,6 +254,9 @@ datediff() {
 }
 mai="datediff "$Exp" "$DATE""
 
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│$NC [ SSH WS : ${status_ws} ]  [ XRAY : ${status_xray} ]   [ NGINX : ${status_nginx} ] $COLOR1   │$NC"
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐$NC"
 echo -e "$COLOR1│$NC Version     :${COLOR1} 5.0 Latest Version${NC}"
 echo -e "$COLOR1│$NC Client Name : $Name"
@@ -281,7 +282,8 @@ case $opt in
 06 | 7) clear ; menu-theme ;;
 07 | 8) clear ; menu-backup ;;
 09 | 9) clear ; add-host ;;
-99 | 99) clear ; menu-dns ;;
+99 | 98) clear ; menu-dns ;;
+99 | 99) clear ; passwd ;;
 10) clear ; crtxray ;;
 11) clear ; menu-set ;;
 12) clear ; info ;;
