@@ -165,7 +165,6 @@ WKT=$(date +"%T")
 DATE=$(date +"%d-%B-%Y")
 cekup=`uptime -p | grep -ow "day"`
 IPVPS=$(curl -s ipinfo.io/ip )
-ssh=$(cat /etc/ssh/.ssh.db | grep "###" | wc -l)
 vm=$(grep -c -E "^#vms " "/usr/local/etc/xray/config.json")
 vl=$(grep -c -E "^#vls " "/usr/local/etc/xray/config.json")
 tr=$(grep -c -E "^#trx " "/usr/local/etc/xray/config.json")
