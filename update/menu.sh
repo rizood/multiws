@@ -165,10 +165,6 @@ WKT=$(date +"%T")
 DATE=$(date +"%d-%B-%Y")
 cekup=`uptime -p | grep -ow "day"`
 IPVPS=$(curl -s ipinfo.io/ip )
-vm=$(grep -c -E "^#vms " "/usr/local/etc/xray/config.json")
-vl=$(grep -c -E "^#vls " "/usr/local/etc/xray/config.json")
-tr=$(grep -c -E "^#trx " "/usr/local/etc/xray/config.json")
-ss=$(cat /etc/shadowsocks/.shadowsocks.db | grep "###" | wc -l)
 serverV=$( curl -sS https://raw.githubusercontent.com/rizood/update/main/version_up)
 if [ "$Isadmin" = "ON" ]; then
 uis="${GREEN}Premium User$NC"
@@ -191,10 +187,6 @@ echo -e "$COLOR1│ Script Version : Reyz-V4 (V5)"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│$NC [ SSH WS : ${status_ws} ]  [ XRAY : ${status_xray} ]   [ NGINX : ${status_nginx} ] $COLOR1   │$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "\033[1;93m│\033[0m ${RED}SSH  VMESS   VLESS  TROJAN   SHADOWSOCKS$NC"
-echo -e "\033[1;93m│\033[0m ${Blue} $ssh     $vm       $vl      $tr           $ss   $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} ${COLBG1}               • VPS PANEL MENU •              ${NC} $COLOR1│$NC"
