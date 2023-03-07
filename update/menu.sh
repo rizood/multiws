@@ -13,6 +13,18 @@ tram=$( free -h | awk 'NR==2 {print $2}' )
 uram=$( free -h | awk 'NR==2 {print $3}' )
 ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
 CITY=$(curl -s ipinfo.io/city )
+#Download/Upload today
+dtoday="$(vnstat -i eth0 | grep "today" | awk '{print $2" "substr ($3, 1, 1)}')"
+utoday="$(vnstat -i eth0 | grep "today" | awk '{print $5" "substr ($6, 1, 1)}')"
+ttoday="$(vnstat -i eth0 | grep "today" | awk '{print $8" "substr ($9, 1, 1)}')"
+#Download/Upload yesterday
+dyest="$(vnstat -i eth0 | grep "yesterday" | awk '{print $2" "substr ($3, 1, 1)}')"
+uyest="$(vnstat -i eth0 | grep "yesterday" | awk '{print $5" "substr ($6, 1, 1)}')"
+tyest="$(vnstat -i eth0 | grep "yesterday" | awk '{print $8" "substr ($9, 1, 1)}')"
+#Download/Upload current month
+dmon="$(vnstat -i eth0 -m | grep "`date +"%b '%y"`" | awk '{print $3" "substr ($4, 1, 1)}')"
+umon="$(vnstat -i eth0 -m | grep "`date +"%b '%y"`" | awk '{print $6" "substr ($7, 1, 1)}')"
+tmon="$(vnstat -i eth0 -m | grep "`date +"%b '%y"`" | awk '{print $9" "substr ($10, 1, 1)}')"
 
 
 BURIQ () {
@@ -163,6 +175,9 @@ cpu_usage="$((${cpu_usage1/\.*/} / ${corediilik:-1}))"
 cpu_usage+=" %"
 WKT=$(date +"%T")
 DATE=$(date +"%d-%B-%Y")
+cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
+cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
+freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
 cekup=`uptime -p | grep -ow "day"`
 IPVPS=$(curl -s ipinfo.io/ip )
 serverV=$( curl -sS https://raw.githubusercontent.com/rizood/update/main/version_up)
@@ -177,16 +192,25 @@ echo -e "$COLOR1│$NC System Uptime  : $uphours $upminutes $uptimecek"
 else
 echo -e "$COLOR1│$NC System Uptime  : $uphours $upminutes"
 fi
+echo -e "$COLOR1│$NC Cpu Model      :$cname"
+echo -e "$COLOR1│$NC Number Of Core :  $cores"
+echo -e "$COLOR1│$NC Cpu Frequenc   :$freq MHz"
+echo -e "$COLOR1│$NC Time Location  : $WKT"
+echo -e "$COLOR1│$NC Date Location  : $DATE"
 echo -e "$COLOR1│$NC IP-VPS         : ${COLOR1}$IPVPS${NC}"
 echo -e "$COLOR1│$NC Current Domain : $(cat /etc/xray/domain)"
 echo -e "$COLOR1│$NC Memory Usage   : $uram / $tram"
 echo -e "$COLOR1│$NC CPU VPS Usage  : $cpu_usage1 %"
 echo -e "$COLOR1│$NC ISP & City     : $ISP & $CITY"
-echo -e "$COLOR1│ Telegram       : @GHReyz"
-echo -e "$COLOR1│ Script Version : Reyz-V4 (V5)"
+echo -e "$COLOR1│$NC Telegram Owner : @GHReyz"
+echo -e "$COLOR1│$NC Order ID Cust  : 71178291"
+echo -e "$COLOR1│$NC Script Version : XRAYSSH (V5)"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│$NC [ SSH WS : ${status_ws} ]  [ XRAY : ${status_xray} ]   [ NGINX : ${status_nginx} ] $COLOR1   │$NC"
+echo -e   "  \e[0;32m Traffic\e[0m       \e[0;37mToday     Yesterday      Month   "
+echo -e   "  \e[0;32m Download\e[0m      $dtoday    $dyest       $dmon   \e[0m"
+echo -e   "  \e[0;32m Upload\e[0m        $utoday    $uyest       $umon   \e[0m"
+echo -e   "  \e[0;32m Total\e[0m       \033[0;36m  $ttoday    $tyest       $tmon  \e[0m "
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} ${COLBG1}               • VPS PANEL MENU •              ${NC} $COLOR1│$NC"
@@ -198,6 +222,9 @@ echo -e "  ${COLOR1}[03]${NC} • VLESS   [${YELLOW}Menu${NC}]   ${COLOR1}[09]${
 echo -e "  ${COLOR1}[04]${NC} • TROJAN  [${YELLOW}Menu${NC}]   ${COLOR1}[10]${NC} • RENEW CERT       $COLOR1│$NC"  
 echo -e "  ${COLOR1}[05]${NC} • SS WS   [${YELLOW}Menu${NC}]   ${COLOR1}[11]${NC} • SETTINGS [${YELLOW}Menu${NC}]  $COLOR1│$NC"
 echo -e "  ${COLOR1}[06]${NC} • SSH WS  [${YELLOW}Menu${NC}]   ${COLOR1}[12]${NC} • INFO     [${YELLOW}Menu${NC}]  $COLOR1│$NC" 
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│$NC [ SSH WS : ${status_ws} ]  [ XRAY : ${status_xray} ]   [ NGINX : ${status_nginx} ] $COLOR1   │$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"                                               
 echo -e "  ${COLOR1}[13]${NC} • REG IP  [${YELLOW}Menu${NC}]   ${COLOR1}[14]${NC} • SET BOT  [${YELLOW}Menu${NC}]  $COLOR1 $NC"
