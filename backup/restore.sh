@@ -48,6 +48,5 @@ cp -r /root/backup/crontab /etc/ &> /dev/null
 cp -r /root/backup/cron.d /etc/ &> /dev/null
 rm -rf /root/backup &> /dev/null
 strt
-rm -rf /root/backup
-rm -f backup.zip
+rm -f /root/backup/backup.zip &> /dev/null
 echo Done
