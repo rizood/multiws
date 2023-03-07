@@ -166,57 +166,6 @@ DATE=$(date +"%d-%B-%Y")
 cekup=`uptime -p | grep -ow "day"`
 IPVPS=$(curl -s ipinfo.io/ip )
 serverV=$( curl -sS https://raw.githubusercontent.com/rizood/update/main/version_up)
-if [ ! -e /etc/vmess ]; then
-    mkdir -p /etc/vmess
-    touch /etc/vmess/.vmess.db
-fi
-vms=$(cat /etc/vmess/.vmess.db)
-if [[ $vms = "" ]]; then
-    vm="0"
-else
-    vm=$(cat /etc/vmess/.vmess.db | grep "###" | wc -l)
-fi
-
-if [ ! -e /etc/vless ]; then
-    mkdir -p /etc/vless
-    touch /etc/vless/.vless.db
-fi
-vms=$(cat /etc/vless/.vless.db)
-if [[ $vms = "" ]]; then
-    vl="0"
-else
-    vl=$(cat /etc/vless/.vless.db | grep "###" | wc -l)
-fi
-
-if [ ! -e /etc/trojan ]; then
-    mkdir -p /etc/trojan
-    touch /etc/trojan/.trojan.db
-fi
-vms=$(cat /etc/trojan/.trojan.db)
-if [[ $vms = "" ]]; then
-    tr="0"
-else
-    tr=$(cat /etc/trojan/.trojan.db | grep "###" | wc -l)
-fi
-if [ ! -e /etc/shadowsocks ]; then
-    mkdir -p /etc/shadowsocks
-    touch /etc/shadowsocks/.shadowsocks.db
-fi
-vms=$(cat /etc/shadowsocks/.shadowsocks.db)
-if [[ $vms = "" ]]; then
-    ss="0"
-else
-    ss=$(cat /etc/shadowsocks/.shadowsocks.db | grep "###" | wc -l)
-fi
-if [ ! -e /etc/ssh ]; then
-    mkdir -p /etc/ssh
-    touch /etc/ssh/.ssh.db
-fi
-vms=$(cat /etc/ssh/.ssh.db)
-if [[ $vms = "" ]]; then
-    ssh="0"
-else
-    ssh=$(cat /etc/ssh/.ssh.db | grep "###" | wc -l)
 if [ "$Isadmin" = "ON" ]; then
 uis="${GREEN}Premium User$NC"
 else
