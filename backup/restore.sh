@@ -13,13 +13,31 @@ unzip backup.zip
 rm -f backup.zip
 sleep 1
 echo Start Restore
+rm -f /root/backup/backup.zip &> /dev/null
+sleep 1
+cd /root/backup
+echo -e "• Restoring passwd data..."
+sleep 1
 cp /root/backup/passwd /etc/ &> /dev/null
+echo -e "• Restoring group data..."
+sleep 1
 cp /root/backup/group /etc/ &> /dev/null
+echo -e "• Restoring shadow data..."
+sleep 1
 cp /root/backup/shadow /etc/ &> /dev/null
+echo -e "• Restoring gshadow data..."
+sleep 1
 cp /root/backup/gshadow /etc/ &> /dev/null
+echo -e "• Restoring chap-secrets data..."
+sleep 1
 cp /root/backup/chap-secrets /etc/ppp/ &> /dev/null
+echo -e "• Restoring passwd1 data..."
+sleep 1
 cp /root/backup/passwd1 /etc/ipsec.d/passwd &> /dev/null
+echo -e "• Restoring ss.conf data..."
+sleep 1
 cp /root/backup/ss.conf /etc/shadowsocks-libev/ss.conf &> /dev/null
+echo -e "• Restoring admin data..."
 sleep 1
 cp -r /root/backup/ssnvpn-pro /var/lib/ &> /dev/null
 cp -r /root/backup/.acme.sh /root/ &> /dev/null
