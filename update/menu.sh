@@ -225,7 +225,7 @@ echo -e "  ${COLOR1}[06]${NC} • SSH WS  [${YELLOW}Menu${NC}]   ${COLOR1}[12]${
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"                                               
 echo -e "  ${COLOR1}[13]${NC} • REG IP  [${YELLOW}Menu${NC}]   ${COLOR1}[14]${NC} • SET BOT  [${YELLOW}Menu${NC}]  $COLOR1 $NC"
-
+echo -e ""
 echo -e "  ${COLOR1}[98]${NC} • SET DNS [${YELLOW}Menu${NC}]   ${COLOR1}[99]${NC} • PASSWORD [${YELLOW}Menu${NC}]  $COLOR1 $NC"
 if [ "$Isadmin" = "ON" ]; then                                                 
 ressee="menu-ip"
