@@ -281,7 +281,7 @@ wget -O add-ssh "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/add-
 wget -O autokill "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/autokill.sh"
 wget -O cek-ssh "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/cek-ssh.sh"
 wget -O ceklim "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/ceklim.sh"
-wget -O del-ssh "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/del-ssh"
+wget -O del-ovpn "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/del-ovpn"
 wget -O delete "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/delete.sh"
 wget -O member "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/member.sh"
 wget -O menussh "https://raw.githubusercontent.com/rizood/multiws/main/ovpn/menussh.sh"
@@ -300,7 +300,7 @@ chmod +x add-ssh
 chmod +x autokill
 chmod +x cek-ssh
 chmod +x ceklim
-chmod +x del-ssh
+chmod +x del-ovpn
 chmod +x delete
 chmod +x member
 chmod +x menussh
