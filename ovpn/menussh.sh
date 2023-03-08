@@ -57,7 +57,7 @@ trial
 renew-ssh
 ;;
 4)
-del-ssh
+del-ovpn
 ;;
 5)
 cek-ssh
